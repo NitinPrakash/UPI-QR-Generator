@@ -1,4 +1,6 @@
-
+<?php include_once('classes/UPI_QR_Generator.php'); 
+      include_once('vendor/autoload.php');       
+?>
 <!DOCTYPE html>
 
 <html>
@@ -38,6 +40,33 @@
         <div class="col-md-12 well text-center">
             <h1>NPCI UPI QR CODE GENERATOR - Coming Soon</h1>
             <h3>This is a work in progress!</h3>
+            
+            <?php
+                $merchant['pn'] = 'Nitin Prakash';
+                $merchant['pa'] = 'nitinprakash@icici';
+                $qr_code = new UPI_QR_Generator( $merchant );                                                             
+                
+                $upi_text = $qr_code ->generate_upi_text();
+                
+                use Endroid\QrCode\QrCode;
+
+                $qrCode = new QrCode();
+                $qrCode->setText($upi_text);
+                $qrCode->setSize(150);
+                $qrCode->setPadding(5);
+                $qrCode->setErrorCorrection('high');
+                /*    ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
+                    ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))*/
+                //$qrCode    ->setLabel('Scan the code');
+                //$qrCode    ->setLabelFontSize(16);
+                //$qrCode->setImageType(QrCode::IMAGE_TYPE_PNG);                              
+                
+                $qrCode->save('./public/files/qrcodes/qrcode.png');                
+                
+            ?>
+            
+            <img src ="./public/files/qrcodes/qrcode.png" />
+            
         </div>
     </div>
 </div>
