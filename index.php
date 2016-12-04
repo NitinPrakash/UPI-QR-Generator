@@ -4,13 +4,13 @@
 <html>
 
 <head>
-  <TITLE>NPCI UPI QR CODE GENERATOR - Coming Soon</TITLE>
-<META NAME="Description" CONTENT="NPCI UPI QR CODE GENERATOR is a PHP Script and class to Generate UPI" />
-<META NAME="Keywords" CONTENT="NCPI CODE GENERATOR,UPI CODE GENERATOR,FREE NCPI CODE GENERATOR,FREE UPI CODE GENERATOR" />
-<META NAME="Copyright" CONTENT="Webcurries.com" />
-<META NAME="distribution" CONTENT="Global" />
-<META NAME="Robots" CONTENT="INDEX,FOLLOW" />
-<META NAME="country" CONTENT="IN" />
+  <title>NPCI UPI QR CODE GENERATOR - Coming Soon</title>
+  <meta name="description" content="NPCI UPI QR CODE GENERATOR is a PHP Script and class to Generate UPI" />
+  <meta name="keywords" content="NCPI CODE GENERATOR,UPI CODE GENERATOR,FREE NCPI CODE GENERATOR,FREE UPI CODE GENERATOR" />
+  <meta name="copyright" content="Webcurries.com" />
+  <meta name="distribution" content="Global" />
+  <meta name="robots" content="INDEX,FOLLOW" />
+  <meta name="country" content="IN" />
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
