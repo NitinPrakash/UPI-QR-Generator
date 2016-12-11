@@ -51,8 +51,8 @@
 <div class="container">
     <div class="row" style="margin-top:2%">
         <div class="col-md-12 text-center">
-            <h1>NPCI UPI QR CODE GENERATOR - Coming Soon</h1>
-            <h3>This is a work in progress!</h3>                        
+            <h1>NPCI UPI QR CODE GENERATOR</h1>
+            <h3>If you like the script, please scan this QR Code below to pay a small amount to keep going!</h3>                        
             
             <img src ="./public/files/qrcodes/nitin_prakash-icici.png" />
             
