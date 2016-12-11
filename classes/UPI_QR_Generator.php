@@ -17,12 +17,11 @@
  * Soon to be used on http://qr-code-generator.in/
  * 
  */
-class UPI_QR_Generator {
-    //put your code here
+class UPI_QR_Generator {    
     
-    public $merchant; // Merchant/Payee Name ( Required )    
-    public $upi;
-    public $upi_qr;
+    public $merchant; // Merchant/Payee Details ( Required )    
+    public $upi; // Variable to hold QR Initials
+    public $upi_qr; // Variable to hold QR Text
     
     public function __construct( $merchant = NULL ){
         
