@@ -13,6 +13,8 @@
  * @author-website http://webcurries.com/
  * @author-email nitin247@outlook.com
  * 
+ * Soon to be used on http://qr-code-generator.in/
+ * 
  */
 class UPI_QR_Generator {
     //put your code here
