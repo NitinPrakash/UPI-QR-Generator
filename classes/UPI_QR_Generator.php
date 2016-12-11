@@ -1,18 +1,18 @@
 <?php
-
 /*
  * NCPI UPI Documentation - http://www.npci.org.in/documents/UPILinkingSpecificationsVersion10draft.pdf
  * 
  * UPI_QR_Generator
  * Version 1.0
+ * 
  */
-
-//namespace UPI_QR_Generator;
-
 /**
  * UPI_QR_Generator Class can be used to generate upi qr codes from Payee Information which is based on NPCI Standards.
  *
  * @author Nitin Prakash
+ * @author-website http://webcurries.com/
+ * @author-email nitin247@outlook.com
+ * 
  */
 class UPI_QR_Generator {
     //put your code here
@@ -39,16 +39,20 @@ class UPI_QR_Generator {
         
     }
     
-    public function upi_text_to_qr(){
+   /* 
+    * 
+    * This functionality is under development
+    * 
+    * public function upi_text_to_qr(){
         
         $qr = new BarcodeQR(); 
         
         $this->pr($qr);
         
-        $qr->text( 'HELLO' );
-        //$qr->draw(200);
+        $qr->text( 'HELLO' );        
         
     }
+    */
     
     public function pr($str){
         echo '<pre>';print_r( $str ); echo '</pre>';
