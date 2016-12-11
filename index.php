@@ -68,7 +68,7 @@
                 
                 <?php
                 
-                $pa = $pn = '';
+                $pa = $pn = $am = $tid = $tr = $tn = $url = '';
                 
                 if( isset($_POST['submit_qr_code']) ){
 
@@ -76,6 +76,12 @@
                     
                     $merchant['pn'] = $pn;
                     $merchant['pa'] = $pa;
+                    $merchant['am'] = $am;
+                    $merchant['tid'] = $tid;
+                    $merchant['tr'] = $tr;
+                    $merchant['tn'] = $tn;
+                    $merchant['url'] = $url;
+                    
                     $qr_code = new UPI_QR_Generator( $merchant );                                                             
 
                     $upi_text = $qr_code ->generate_upi_text();                                
@@ -94,8 +100,7 @@
                     $qrCode->save('./public/files/qrcodes/temp.png');
                     
                     $img = './public/files/qrcodes/temp.png';
-                    
-                    
+                                        
                 }else{
                     
                     $img = "./public/files/qrcodes/sample.png";
@@ -107,7 +112,7 @@
                 <!-- Text input-->
 
                 <div class="form-group">
-                  <label class="col-md-3 control-label" for="pa">Payee Name</label>  
+                    <label class="col-md-3 control-label" for="pa"><i class="text-danger">*</i> Payee Name</label>  
                   <div class="col-md-9">
                   <input id="pa" name="pn" type="text" placeholder="Enter payee name" class="form-control" required value="<?php echo $pn;?>" />
                   <span class="help-block">( Enter payee name as on bank )</span>  
@@ -115,10 +120,54 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-md-3 control-label" for="pa">Payee Address</label>  
+                  <label class="col-md-3 control-label" for="pa"><i class="text-danger">*</i> Payee Address</label>  
                   <div class="col-md-9">
                   <input id="pa" name="pa" type="text" placeholder="Enter payee virtual address" class="form-control" required value="<?php echo $pa;?>" />
                   <span class="help-block">( Enter payee virtual address )</span>  
+                  </div>
+                </div>
+                
+                <p class="alert alert-info text-center">
+                    Following fields below are optional!
+                </p>
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="am"> Payee Amount</label>  
+                  <div class="col-md-9">
+                  <input id="am" name="am" type="number" placeholder="Enter payee amount" class="form-control" value="<?php echo $am;?>" />
+                  <span class="help-block">( Transaction amount in decimal format )</span>  
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="tid"> Merchant Code</label>  
+                  <div class="col-md-9">
+                  <input id="tid" name="tid" type="text" placeholder="Enter merchant code" class="form-control" value="<?php echo $tid;?>" />
+                  <span class="help-block">( Merchant may acquire the txn id from his PSP )</span>  
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="tr"> Transaction reference ID </label>  
+                  <div class="col-md-9">
+                  <input id="am" name="am" type="text" placeholder="Enter transaction ID" class="form-control" value="<?php echo $tr;?>" />
+                  <span class="help-block">(  Order number, subscription number, Bill ID, booking ID, insurance renewal reference, etc )</span>  
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="tn"> Transaction note </label>  
+                  <div class="col-md-9">
+                  <input id="tn" name="tn" type="text" placeholder="Enter transaction note" class="form-control" value="<?php echo $tn;?>" />
+                  <span class="help-block">(  Short description of the transaction )</span>  
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label" for="url"> Reference URL </label>  
+                  <div class="col-md-9">
+                  <input id="url" name="url" type="url" placeholder="Enter Reference URL" class="form-control" value="<?php echo $url;?>" />
+                  <span class="help-block">(  URL which provides transaction details )</span>  
                   </div>
                 </div>
 
@@ -150,9 +199,9 @@
 <!-- Open source code -->
 
 <!-- Compiled and minified JavaScript -->
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.6.0/parsley.min.js"></script>
+  <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>  
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.6.0/parsley.min.js"></script>
   
 </body>
 </html>
