@@ -1,5 +1,6 @@
 <?php
 /*
+ * Please read NPCI Documentation to better understand this class
  * NCPI UPI Documentation - http://www.npci.org.in/documents/UPILinkingSpecificationsVersion10draft.pdf
  * 
  * UPI_QR_Generator
