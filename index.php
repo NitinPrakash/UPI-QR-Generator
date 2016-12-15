@@ -22,11 +22,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Material Design fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
 
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="public/assets/css/custom.css">
 
   <!-- jQuery -->
@@ -100,6 +101,8 @@
                     $qrCode->save('./public/files/qrcodes/temp.png');
                     
                     $img = './public/files/qrcodes/temp.png';
+                    
+                    $qr_generated = 1;
                                         
                 }else{
                     
@@ -180,14 +183,18 @@
                   </div>
                 </div>
 
-
                 </form>
             </div>
 
             <div class="col-md-3 text-center" align="center">
                 
                 <div>                      
-                        <img id="generated-qr-code" src = "<?php echo $img;?>" />                    
+                    <p> <img id="generated-qr-code" src = "<?php echo $img;?>" /> </p>
+                    <p> <a title="Download PNG" data-toggle="tooltip" class="btn btn-sm btn-primary" href="<?php echo $img;?>" download="UPI-QR-Code"><i class="fa fa-image"></i></a> &nbsp;
+                        <!-- <a title="Download PDF" data-toggle="tooltip" class="btn btn-sm btn-info" href="<?php echo $img;?>" download="UPI-QR-Code.pdf"><i class="fa fa-file"></i></a> &nbsp; 
+                        <a title="Print" data-toggle="tooltip" class="btn btn-sm btn-danger" href="<?php echo $img;?>" download="UPI-QR-Code"><i class="fa fa-print"></i></a> -->
+                    </p>
+                        
                 <div>               
 
             </div>            
@@ -202,6 +209,11 @@
   <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>  
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.6.0/parsley.min.js"></script>
+  <script defer>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+  </script>
   
 </body>
 </html>
