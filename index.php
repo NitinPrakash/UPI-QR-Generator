@@ -27,7 +27,7 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="public/assets/css/custom.css">
 
   <!-- jQuery -->
@@ -115,9 +115,9 @@
                 <!-- Text input-->
 
                 <div class="form-group">
-                    <label class="col-md-3 control-label" for="pa"><i class="text-danger">*</i> Payee Name</label>  
+                    <label class="col-md-3 control-label" for="pn"><i class="text-danger">*</i> Payee Name</label>  
                   <div class="col-md-9">
-                  <input id="pa" name="pn" type="text" placeholder="Enter payee name" class="form-control" required value="<?php echo $pn;?>" />
+                  <input id="pn" name="pn" type="text" placeholder="Enter payee name" class="form-control" required value="<?php echo $pn;?>" />
                   <span class="help-block">( Enter payee name as on bank )</span>  
                   </div>
                 </div>
@@ -145,7 +145,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label" for="tid"> Merchant Code</label>  
                   <div class="col-md-9">
-                  <input id="tid" name="tid" type="text" placeholder="Enter merchant code" class="form-control" value="<?php echo $tid;?>" />
+                  <input id="mc" name="mc" type="text" placeholder="Enter merchant code" class="form-control" value="<?php echo $tid;?>" />
                   <span class="help-block">( Merchant may acquire the txn id from his PSP )</span>  
                   </div>
                 </div>
@@ -153,7 +153,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label" for="tr"> Transaction reference ID </label>  
                   <div class="col-md-9">
-                  <input id="am" name="am" type="text" placeholder="Enter transaction ID" class="form-control" value="<?php echo $tr;?>" />
+                  <input id="tid" name="tid" type="text" placeholder="Enter transaction ID" class="form-control" value="<?php echo $tr;?>" />
                   <span class="help-block">(  Order number, subscription number, Bill ID, booking ID, insurance renewal reference, etc )</span>  
                   </div>
                 </div>
@@ -169,7 +169,7 @@
                 <div class="form-group">
                   <label class="col-md-3 control-label" for="url"> Reference URL </label>  
                   <div class="col-md-9">
-                  <input id="url" name="url" type="url" placeholder="Enter Reference URL" class="form-control" value="<?php echo $url;?>" />
+                  <input id="url" name="url" type="url" placeholder="Enter reference URL" class="form-control" value="<?php echo $url;?>" />
                   <span class="help-block">(  URL which provides transaction details )</span>  
                   </div>
                 </div>
