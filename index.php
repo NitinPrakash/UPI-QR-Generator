@@ -2,7 +2,6 @@
       include_once('vendor/autoload.php');
       use Endroid\QrCode\QrCode;
 ?>
-<!DOCTYPE html>
 
 <html>
 
